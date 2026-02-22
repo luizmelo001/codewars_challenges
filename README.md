@@ -6,19 +6,6 @@ A personal repository documenting my journey through Codewars — a platform for
 
 ---
 
-## 📌 Table of Contents
-
-- [About](#about)
-- [Repository Structure](#repository-structure)
-- [Languages Used](#languages-used)
-- [Progress Tracking](#progress-tracking)
-- [How to Use This Repo](#how-to-use-this-repo)
-- [Contributing](#contributing)
-- [Resources](#resources)
-- [License](#license)
-
----
-
 ## 🧠 About
 
 Codewars offers coding challenges called **kata** (training exercises) ranked by **kyu/dan** difficulty:
