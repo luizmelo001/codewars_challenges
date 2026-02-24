@@ -24,11 +24,7 @@ parts_sums(ls) -> [10037855, 9293730, 9292795, 9292388, 9291934, 9291504, 929141
 """
 
 def parts_sums(ls):
-    ls_sum = 0
-    result = []
-    
-    for i in range(len(ls)+1):
-        ls_sum = sum(ls[i:])
-        result.append(ls_sum)
-        
-    return result
+    sums = []
+    for i in range(len(ls) + 1):
+        sums.append(sum(ls[i:]))
+    return sums

@@ -16,19 +16,19 @@ Example:
 """
 
 def make_chocolates(small, big, goal):
-
-    remaining = goal % small
-    counter = 0
-
-    while goal > 0:
-        goal -= small
-        counter += 1
-        print(f"goal: {goal}, remaining: {remaining}, counter: {counter}")
-
-    if big > remaining:
-        return -1
- 
-    return counter
+    # Step 1: Try to use as many big bars (5kg) as possible
+    max_big_we_can_use = min(big, goal // 5)
+    
+    # Step 2: Try from the maximum number of big bars downwards
+    for num_big in range(max_big_we_can_use, -1, -1):
+        remaining_kg = goal - (num_big * 5)
+        
+        # If remaining can be exactly covered by small chocolates
+        if remaining_kg <= small:
+            return remaining_kg   # number of 1kg chocolates needed
+    
+    # If no combination worked
+    return -1
     
 print(make_chocolates(4, 1, 13))
 print(make_chocolates(2, 1, 7))
